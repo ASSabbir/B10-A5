@@ -3,15 +3,19 @@ function calculate(price, money, parent) {
 
     const number = /\d/;
     const string = /[a-zA-Z]/;
+    
+
 
     if (number.test(money) && string.test(money)) {
-        alert('this is not money')
+        alert('They Need Money ')
     }
     else if (number.test(money)) {
         const temp = parseInt(price.innerText);
         price.innerText = parseInt(money) + temp;
         const myAccount = document.querySelector('#total-Account');
         myAccount.innerText = myAccount.innerText - money;
+        const modal=document.querySelector('#modal')
+        modal.classList.remove('hidden')
         const output = document.querySelector('#output')
         const date = new Date()
 
@@ -25,8 +29,8 @@ function calculate(price, money, parent) {
         output.appendChild(apent)
 
     }
-    else if (string.test(money)) {
-        alert('this is not money')
+    else  {
+        alert('They Need Money not ABCDE')
     }
 
 }
@@ -87,4 +91,9 @@ document.querySelector('#historyBtn').addEventListener('click', function () {
 
 
 })
+document.querySelector('#modal button').addEventListener('click',function (){
+    const modal=document.querySelector('#modal')
+        modal.classList.add('hidden')
+})
+        
 
