@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <style>
         .grotesk {
             font-family: "Schibsted Grotesk", sans-serif;
@@ -29,12 +30,12 @@
 </head>
 
 <body class=" text-white inter">
-    <div class="bg-zinc-800 ">
-        <nav class="bg-zinc-800 flex justify-between items-center max-w-screen-2xl py-5 mx-auto">
-            <div class=" relative w-[120px] h-12">
+    <div class="bg-zinc-800 sticky top-0 z-10">
+        <nav class="bg-zinc-800 flex justify-between  w-full  items-center max-w-screen-2xl py-5 mx-auto">
+            <a href="blog.html" class=" relative w-[120px] h-12">
                 <button
                     class="bg-lime-400 border-lime-400 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-zinc-800 font-bold py-2 text-lg ">Blog</button>
-            </div>
+            </a>
             <div class="flex items-center gap-5">
                 <img src="./assets/logo.png" alt="" class="md:w-[2vw] w-5">
                 <h1 class="md:text-[1.5vw] grotesk font-bold">TideSupport Fund</h1>
@@ -46,19 +47,19 @@
         </nav>
         <div class="bg-zinc-900 w-full flex justify-center py-5 gap-5">
             <div class=" relative w-[120px] h-12">
-                <button
+                <button id="donationBtn"
                     class="bg-lime-400 border-lime-400 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-zinc-800 font-bold py-2 text-lg ">Donation</button>
             </div>
             <div class=" relative w-[120px] h-12">
-                <button
-                    class="bg-zinc-900 border-lime-400 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-lime-400 font-bold py-2 text-lg">Donation</button>
+                <button id="historyBtn"
+                    class="bg-zinc-900 border-lime-400 focus:bg-red-300 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-lime-400 font-bold py-2 text-lg">History</button>
             </div>
         </div>
         <div class="w-full bg-zinc-900 flex justify-center">
             <div class="w-[80%] h-[1px] border-t-[2px] border-zinc-500"></div>
         </div>
     </div>
-    <section class="h bg-zinc-900 w-full pt-10">
+    <section class=" bg-zinc-900 w-full pt-10">
         <div class="card-containerr space-y-10  max-w-screen-2xl mx-auto ">
             <div class="border-[1px] border-zinc-600 p-5 rounded-2xl">
                 <div class=" flex justify-between md:flex-row flex-col">
@@ -107,7 +108,8 @@
             </div>
             <div class="border-[1px] border-zinc-600 p-5 rounded-2xl">
                 <div class=" flex justify-between md:flex-row flex-col">
-                    <div class="md:w-[45%] h-auto bg-[url('./assets/quota-protest.png')] rounded-2xl bg-cover bg-center">
+                    <div
+                        class="md:w-[45%] h-auto bg-[url('./assets/quota-protest.png')] rounded-2xl bg-cover bg-center">
                     </div>
                     <div class="md:w-[50%] card-text3 space-y-8 ">
                         <div class="flex items-center gap-5">
@@ -124,19 +126,21 @@
                             individuals in their time of need.</p>
                         <input type="text" class="bg-zinc-900 border-[1px] rounded-xl w-full p-3">
                         <div class=" relative w-full h-12">
-                            <button id="donet-btn3"
+                            <button id="donet-btn3" 
                                 class="bg-lime-400 w-full border-lime-400 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-zinc-800 font-bold py-2 text-lg ">Blog</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card-containerr  max-w-screen-2xl mx-auto ">
+        <div class="history-containerr min-h-screen hidden  max-w-screen-2xl mx-auto ">
             <div id="output" class="space-y-5">
 
             </div>
         </div>
     </section>
+    
+    
     <script src="script.js"></script>
 </body>
 

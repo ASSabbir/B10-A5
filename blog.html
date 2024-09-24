@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-white inter bg-zinc-900">
+    <div class="bg-zinc-800 w-f">
+        <nav class="bg-zinc-800 flex justify-between  w-full top-5 z-50 items-center max-w-screen-2xl py-5 mx-auto">
+            <a href="index.html" class=" relative w-[120px] h-12">
+                <button
+                    class="bg-lime-400 border-lime-400 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-zinc-800 font-bold py-2 text-lg ">Home</button>
+            </a>
+            <div class="flex items-center gap-5">
+                <img src="./assets/logo.png" alt="" class="md:w-[2vw] w-5">
+                <h1 class="md:text-[1.5vw] grotesk font-bold">TideSupport Fund</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <img src="./assets/coin.png" alt="">
+                <h1><span id="total-Account">5500</span> BDT</h1>
+            </div>
+        </nav>
+        <div class="bg-zinc-900 w-full flex justify-center py-5 gap-5">
+            <div class=" relative w-[120px] h-12">
+                <button id="donationBtn"
+                    class="bg-lime-400 border-lime-400 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-zinc-800 font-bold py-2 text-lg ">Donation</button>
+            </div>
+            <div class=" relative w-[120px] h-12">
+                <button id="historyBtn"
+                    class="bg-zinc-900 border-lime-400 border-2 hover:scale-95 duration-300  absolute px-5 rounded-xl text-lime-400 font-bold py-2 text-lg">History</button>
+            </div>
+        </div>
+        <div class="w-full bg-zinc-900 flex justify-center">
+            <div class="w-[80%] h-[1px] border-t-[2px] border-zinc-500"></div>
+        </div>
+    </div>
+    <div class="max-w-screen-2xl mx-auto h-[80.5vh] space-y-5">
+        <div class="collapse collapse-arrow bg-zinc-900 mt-10 border-[1px] border-zinc-600">
+            <input type="radio" name="my-accordion-2"  />
+            <div class="collapse-title text-2xl font-medium">What is the purpose of this platform?</div>
+            <div class="collapse-content">
+                <p class="text-zinc-400">To help prevent floods and assist people affected by flooding in Bangladesh.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-zinc-900 mt-10 border-[1px] border-zinc-600">
+            <input type="radio" name="my-accordion-2"  />
+            <div class="collapse-title text-2xl font-medium">How can I donate to flood victims?</div>
+            <div class="collapse-content">
+                <p class="text-zinc-400">You can donate directly through our platform's donation section.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-zinc-900 mt-10 border-[1px] border-zinc-600">
+            <input type="radio" name="my-accordion-2"  />
+            <div class="collapse-title text-2xl font-medium">How does this website help prevent flooding?</div>
+            <div class="collapse-content">
+                <p class="text-zinc-400">We provide real-time data, resources, and strategies to reduce flood risks.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-zinc-900 mt-10 border-[1px] border-zinc-600">
+            <input type="radio" name="my-accordion-2"  />
+            <div class="collapse-title text-2xl font-medium">Which areas are most affected by floods in Bangladesh?</div>
+            <div class="collapse-content">
+                <p class="text-zinc-400">Regions like Noakhali and Feni are commonly affected by floods.
+                </p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-zinc-900 mt-10 border-[1px] border-zinc-600">
+            <input type="radio" name="my-accordion-2"  />
+            <div class="collapse-title text-2xl font-medium">How can I get involved in flood relief efforts?</div>
+            <div class="collapse-content">
+                <p class="text-zinc-400">You can support through donations or volunteer for relief activities.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
